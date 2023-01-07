@@ -44,18 +44,17 @@ app.get('/', async (req, res) => {
 
 app.get('/edit', async (req, res) => {
 	const entries = await Entry.find();
-	res.render('pages/edit', {
-		loggedIn: false,
-		entries
-	});
+	res.render('pages/edit', { entries, loggedIn: false });
 });
 
-app.post('/login', (req, res) => {
+app.post('/edit', async (req, res) => {
 	const { username, password } = req.body;
+	const entries = await Entry.find();
 
 	if (username === `${process.env.USERNAME}` && password === `${process.env.PASSWORD}`) {
 		res.render('pages/edit', {
-			loggedIn: true
+			loggedIn: true,
+			entries: entries
 		});
 	} else {
 		res.render('pages/index', {
