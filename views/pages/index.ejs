@@ -7,21 +7,9 @@
 
             <ul>
                 <% entries.forEach(e => { %>
-                <li>
 
-                    <h2 class="yell-voice"><%= e.heading %></h2>
-                    <small><%= e.subheading %></small>
+                <%- include ('../partials/entry-card', {e}) %>
 
-                    <div class="container">
-
-                        <% e.tags.forEach(tag => { %>
-                        <p class="tiny-voice"><%= tag %></p>
-                        <% }); %>
-
-                    </div>
-
-                    <p><%= e.content %></p>
-                </li>
                 <% }); %>
             </ul>
 

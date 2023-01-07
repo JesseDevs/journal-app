@@ -7,14 +7,14 @@
             <a class='button' href="/edit">EDIT</a>
         </li>
         <li>
-            <form>
+            <form action="/edit" method="post">
                 <label for="username">Username:</label><br>
                 <input type="text" id="username" name="username">
 
                 <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password">
 
-                <a class='button' href="/login">LOG IN</a>
+                <button type="submit" class="button">Log In</button>
             </form>
         </li>
     </ul>

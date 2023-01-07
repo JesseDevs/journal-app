@@ -1,0 +1,15 @@
+<li>
+
+	<h2 class="loud-voice"><%= e.heading %></h2>
+	<small><%= e.subheading %></small>
+
+	<div class="container">
+
+		<% e.tags.forEach(tag => { %>
+		<p class="tiny-voice"><%= tag %></p>
+		<% }); %>
+
+	</div>
+
+	<p><%= e.content %></p>
+</li>

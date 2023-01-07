@@ -1,0 +1,58 @@
+<%- include ('../partials/header') %>
+
+<main class="page-content">
+
+	<% if (loggedIn) { %>
+	<section class="has-add-entry">
+		<inner-column>
+
+			<div id='vue-app-context' :class="outputStyle">
+
+				<form autocomplete="off">
+					<h3 class="attention-voice">New Entry..? - Make this an array of headings for each time. Could be
+						cute.</h3>
+					<field>
+						<label for='heading'>Heading?</label>
+						<input autocomplete="off" id='heading' type='text' v-model='heading'>
+					</field>
+					<field>
+						<label for='subheading'>Subheading?</label>
+						<input autocomplete="off" id='subheading' type='text' v-model='subheading'>
+					</field>
+					<field>
+						<label for='tags'>Tags?</label>
+						<input autocomplete="off" id='tags' type='text' v-model='tags'>
+					</field>
+					<field>
+						<label for='content'>Content?</label>
+						<input autocomplete="off" id='content' type='text' v-model='content'>
+					</field>
+
+
+					<button class='action-link' type='submit' v-on:click.prevent="update">Enter</button>
+				</form>
+
+			</div>
+
+		</inner-column>
+	</section>
+	<% } %>
+
+	<section class="has-entries-list">
+		<inner-column>
+
+			<ul>
+				<% entries.forEach(e => { %>
+
+				<%- include ('../partials/entry-card', {e}) %>
+
+				<% }); %>
+			</ul>
+
+		</inner-column>
+	</section>
+
+</main>
+
+
+<%- include ('../partials/footer') %>
