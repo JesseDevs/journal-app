@@ -50,8 +50,9 @@ app.get('/edit', async (req, res) => {
 app.post('/edit', async (req, res) => {
 	const { username, password } = req.body;
 	const entries = await Entry.find();
+	let { USERNAME, PASSWORD } = process.env;
 
-	if (username === `${process.env.USERNAME}` && password === `${process.env.PASSWORD}`) {
+	if (username === `${USERNAME}` && password === `${PASSWORD}`) {
 		res.render('pages/edit', {
 			loggedIn: true,
 			entries: entries
