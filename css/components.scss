@@ -1,0 +1,129 @@
+action-links {
+	display: flex;
+	gap: 5px;
+
+	button {
+		cursor: pointer;
+	}
+
+	span {
+		pointer-events: none;
+	}
+}
+
+#menu-toggle:checked~.menu a:hover {
+	background-color: var(--accent);
+}
+
+
+.button {
+	appearance: none;
+	background-color: transparent;
+	border: 2px solid #1A1A1A;
+	color: #3B3B3B;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0;
+	min-width: 0;
+	outline: none;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 300ms cubic-bezier(.23, 1, 0.32, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	width: 100%;
+	will-change: transform;
+}
+
+.button:disabled {
+	pointer-events: none;
+}
+
+.button:hover {
+	color: #fff;
+	background-color: #1A1A1A;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+	transform: translateY(-2px);
+}
+
+.button:active {
+	box-shadow: none;
+	transform: translateY(0);
+}
+
+
+.Normal {
+	background-color: rgb(188 189 176);
+}
+
+.Fire {
+	background-color: rgb(231 97 77);
+}
+
+.Water {
+	background-color: rgb(108 172 248);
+}
+
+.Grass {
+	background-color: rgb(155 213 100);
+}
+
+.Electric {
+	background-color: rgb(248 230 96);
+}
+
+.Ice {
+	background-color: rgb(170 239 252);
+}
+
+.Fighting {
+	background-color: rgb(155 91 71);
+}
+
+.Poison {
+	background-color: rgb(159 98 158);
+}
+
+.Ground {
+	background-color: rgb(235 209 112);
+}
+
+.Flying {
+	background-color: rgb(130 168 248);
+}
+
+.Psychic {
+	background-color: rgb(230 110 178);
+}
+
+.Bug {
+	background-color: rgb(198 209 74);
+}
+
+.Rock {
+	background-color: rgb(204 190 125);
+}
+
+.Ghost {
+	background-color: rgb(122 117 209);
+}
+
+.Dark {
+	background-color: rgb(137 108 90);
+}
+
+.Dragon {
+	background-color: rgb(131 115 247);
+}
+
+.Steel {
+	background-color: rgb(195 194 216);
+}
+
+.Fairy {
+	background-color: rgb(240 177 250);
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap');
+
+.roar-voice {
+	font-size: clamp(2.99rem, calc(1.27rem + 8.0vw), 7.0rem);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.yell-voice {
+	font-size: clamp(2.49rem, calc(1.29rem + 6.00vw), 5.79rem);
+}
+
+.loud-voice {
+	font-size: clamp(2.07rem, calc(1.25rem + 4.12vw), 4.34rem);
+}
+
+.attention-voice {
+	font-size: clamp(1.73rem, calc(1.17rem + 2.78vw), 3.26rem);
+}
+
+.chant-voice {
+	font-size: clamp(1.44rem, calc(1.08rem + 1.50vw), 2.44rem);
+	font-weight: 600;
+}
+
+.strict-voice {
+	font-size: clamp(1.20rem, calc(0.97rem + 1.15vw), 1.83rem);
+}
+
+.calm-voice,
+p,
+li,
+a {
+
+	font-size: clamp(1.00rem, calc(0.86rem + 0.68vw), 1.38rem);
+	line-height: 1.4;
+}
+
+small,
+.small-voice {
+	font-size: clamp(0.83rem, calc(0.76rem + 0.36vw), 1.03rem);
+}
+
+:is(.calm-voice, p, li) em {
+	font-style: italic;
+}
+
+:is(.calm-voice, p, li) strong {
+	font-weight: 700;
+}
+
+code {
+	font-family: monospace;
+	font-size: 1.1em;
+	color: green;
+}
