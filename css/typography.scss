@@ -3,30 +3,29 @@
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap');
 
 .roar-voice {
-	font-size: clamp(2.99rem, calc(1.27rem + 8.0vw), 7.0rem);
+	font-size: clamp(3.36rem, calc(2.63rem + 3.65vw), 5.36rem);
 	font-weight: 700;
 	text-transform: uppercase;
 }
 
 .yell-voice {
-	font-size: clamp(2.49rem, calc(1.29rem + 6.00vw), 5.79rem);
+	font-size: clamp(2.80rem, calc(2.26rem + 2.71vw), 4.29rem);
 }
 
 .loud-voice {
-	font-size: clamp(2.07rem, calc(1.25rem + 4.12vw), 4.34rem);
+	font-size: clamp(2.33rem, calc(1.93rem + 2.00vw), 3.43rem);
 }
 
 .attention-voice {
-	font-size: clamp(1.73rem, calc(1.17rem + 2.78vw), 3.26rem);
+	font-size: clamp(1.94rem, calc(1.65rem + 1.46vw), 2.75rem);
 }
 
 .chant-voice {
-	font-size: clamp(1.44rem, calc(1.08rem + 1.50vw), 2.44rem);
-	font-weight: 600;
+	font-size: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.20rem);
 }
 
 .strict-voice {
-	font-size: clamp(1.20rem, calc(0.97rem + 1.15vw), 1.83rem);
+	font-size: clamp(1.35rem, calc(1.20rem + 0.74vw), 1.76rem);
 }
 
 .calm-voice,
@@ -34,13 +33,17 @@ p,
 li,
 a {
 
-	font-size: clamp(1.00rem, calc(0.86rem + 0.68vw), 1.38rem);
+	font-size: clamp(0.94rem, calc(0.87rem + 0.34vw), 1.13rem);
 	line-height: 1.4;
 }
 
 small,
 .small-voice {
-	font-size: clamp(0.83rem, calc(0.76rem + 0.36vw), 1.03rem);
+	font-size: clamp(0.78rem, calc(0.74rem + 0.22vw), 0.90rem);
+}
+
+.tiny-voice {
+	font-size: clamp(0.65rem, calc(0.63rem + 0.13vw), 0.72rem);
 }
 
 :is(.calm-voice, p, li) em {
