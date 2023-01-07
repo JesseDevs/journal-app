@@ -14,23 +14,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
 
 async function railConnection() {
-	let { MONGO_BASE: base, MONGOUSER: user, MONGOPASSWORD: password, MONGOHOST: host, MONGOPORT: port, MONGO_DATABASE: database } = process.env;
+	let { MONGOUSER, MONGOPASSWORD, MONGOHOST, MONGOPORT } = process.env;
 
-	if (!base) {
-		base = "mongodb"
-	}
+	let endpoint = `mongodb://${MONGOUSER}:${MONGOPASSWORD}@${MONGOHOST}:${MONGOPORT}`;
 
-	let portConnection = "";
-	if (port) {
-		portConnection = ':' + port;
-	}
-
-	let databaseName = '';
-	if (database) {
-		databaseName = '/' + database;
-	}
-
-	let endpoint = `${base}://${user}:${password}@${host}${portConnection}${databaseName}`;
+	console.log(endpoint)
 
 	await mongoose.connect(endpoint);
 }
