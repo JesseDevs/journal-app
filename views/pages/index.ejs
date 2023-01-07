@@ -1,19 +1,33 @@
 <%- include ('../partials/header') %>
 
 <main class="page-content">
-    <% entries.forEach(e => { %>
 
-    <section class="<%= e %>">
+    <section class="has-entries-list">
         <inner-column>
 
-            <%- include(`../modules/${section.module}.ejs`,{ section: section })
-            %>
+            <ul>
+                <% entries.forEach(e => { %>
+                <li>
+
+                    <h2 class="yell-voice"><%= e.heading %></h2>
+                    <small><%= e.subheading %></small>
+
+                    <div class="container">
+
+                        <% e.tags.forEach(tag => { %>
+                        <p class="tiny-voice"><%= tag %></p>
+                        <% }); %>
+
+                    </div>
+
+                    <p><%= e.content %></p>
+                </li>
+                <% }); %>
+            </ul>
 
         </inner-column>
     </section>
 
-
-    <% }); %>
 </main>
 
 

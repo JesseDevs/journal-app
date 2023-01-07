@@ -28,7 +28,7 @@ const dataSchema = new mongoose.Schema({
 	heading: String,
 	subheading: String,
 	tags: [String],
-	entry: String,
+	content: String,
 });
 
 const Entry = mongoose.model('Entry', dataSchema);
