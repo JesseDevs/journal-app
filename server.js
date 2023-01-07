@@ -37,8 +37,32 @@ app.listen(process.env.PORT, () => {
 	console.log(`Server listening on port ${process.env.PORT}`);
 });
 
-app.get('/', (req, res) => {
-	res.render('pages/index');
+app.get('/', async (req, res) => {
+	const entries = await Entry.find();
+	res.render('pages/index', { entries });
+});
+
+app.get('/edit', async (req, res) => {
+	const entries = await Entry.find();
+	res.render('pages/edit', {
+		loggedIn: false,
+		entries
+	});
+});
+
+app.post('/login', (req, res) => {
+	const { username, password } = req.body;
+
+	if (username === `${process.env.USERNAME}` && password === `${process.env.PASSWORD}`) {
+		res.render('pages/edit', {
+			loggedIn: true
+		});
+	} else {
+		res.render('pages/index', {
+			loggedIn: false,
+			message: "Wrong Information"
+		});
+	}
 });
 
 app.post('/api/add-data', (req, res) => {
