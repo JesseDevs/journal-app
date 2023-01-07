@@ -1,14 +1,20 @@
 <%- include ('../partials/header') %>
 
-<section>
-    <inner-column>
+<main class="page-content">
+    <% entries.forEach(e => { %>
 
-        <module>
-            <h1>This is the home page</h1>
-        </module>
+    <section class="<%= e %>">
+        <inner-column>
 
-    </inner-column>
-</section>
+            <%- include(`../modules/${section.module}.ejs`,{ section: section })
+            %>
+
+        </inner-column>
+    </section>
+
+
+    <% }); %>
+</main>
 
 
 <%- include ('../partials/footer') %>
