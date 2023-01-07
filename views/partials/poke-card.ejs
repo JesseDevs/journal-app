@@ -1,0 +1,46 @@
+<%
+pokemons.forEach(pokemon => { 
+	
+	let idString = pokemon.id.toString();
+    if (idString.length < 3) {
+    	idString = '0'.repeat(3 - idString.length) + idString;
+	}
+	let types = pokemon.type;
+%>
+<li>
+	<poke-card>
+		<a href="/pokemon/<%= idString %>">
+			<article class="main">
+				<title-section>
+					<span class="strict-voice">#<%= idString %></span>
+					<picture>
+						<img src="<%= pokemon.image.sprite %>" alt="">
+					</picture>
+				</title-section>
+				<picture class="portrait">
+					<img src="<%= pokemon.image.hires %>" alt="" loading="lazy">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</picture>
+			</article>
+		</a>
+
+		<h4 class="strict-voice"><strong><%= pokemon.name.english %></strong></h4>
+		<container-box>
+			<div class="type-container">
+				<% types.forEach(type => {%>
+				<p class="pill small-voice <%= type %>"><%= type %></p>
+				<% }); %>
+			</div>
+			<action-links>
+				<%- include ('../partials/heart-button') %>
+				<%- include ('../partials/add-button') %>
+			</action-links>
+		</container-box>
+
+	</poke-card>
+</li>
+<% }); %>
