@@ -44,7 +44,7 @@ app.get('/', async (req, res) => {
 
 app.get('/edit', async (req, res) => {
 	const entries = await Entry.find();
-	res.render('pages/edit', { entries, loggedIn: false });
+	res.render('pages/index', { entries });
 });
 
 app.post('/edit', async (req, res) => {
